@@ -7,6 +7,6 @@
 # change the build
 # changing cloud.yml file
 # change credentials
-# ssh agent?
+# ssh agent
 # branch name
 # added spartajenkins user as collaborator
