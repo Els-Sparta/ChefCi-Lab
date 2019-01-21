@@ -9,3 +9,4 @@
 # change credentials
 # ssh agent?
 # branch name
+# added spartajenkins user as collaborator
