@@ -1,4 +1,3 @@
 # node
 
-TODO: Enter the cookbook description here.
-
+# Testing CI pipeline for a Node Cookbook on Jenkins
