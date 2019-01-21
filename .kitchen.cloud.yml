@@ -6,6 +6,7 @@ driver:
   # This is the subnet id for DevOpsStudents
   subnet_id: subnet-0e9b6138ff1ce18f2
   # Name of the DevOpsStudents key
+  # aws_ssh_key_id: DevOpsStudents
   associate_public_ip: true
 
 # transport:
