@@ -28,6 +28,7 @@ Test it on your local machine using Chef's unit and integration tests
 > Access Sparta's Jenkins server `http://jenkins.spartaglobal.academy:8080`, log in with your credentials.
 
 <p> Use the following steps to configure  Jenkins build to run a CI test for your Cookbook</p>
+
 1. Create a freestyle job and give your project a name
 
 2. Check GitHub Project, and add your GitHub url for your cookbook (https version)
@@ -82,14 +83,18 @@ kitchen test
     * Select 'Only use trigger phrase for build triggering'
   * Remove information from Crontab line, we don't want the build to run periodically only when a pull request is initiated.
 
+
 2. Add another secret text to Build Environment
   * Select the *Jenkins GitHub Users* GitHub Token
   * Add your own SSH User Private Key, select your credentials
 
+
 3. Check SSH Agent in Bindings and add the *Jenkins GitHub Users* credentials
+
 
 4. Switch to your GitHub repository
   * Protect your master branch, so that it requires you to have one approving review to merge a pull request into master
   * Add the *Jenkins GitHub User* as a reviewer
+
 
 > Open a pull request into master and add a comment using your the word you set as your trigger phrase in your Jenkins build
