@@ -1,4 +1,5 @@
-# node
+# Chef CI Lab
+## Creating a node cookbook to be used to provision machines
 
 # Testing CI pipeline for a Node Cookbook on Jenkins
 # Test 2
