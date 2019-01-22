@@ -2,7 +2,7 @@
 
 ## **Timings**
 
-## ** This lesson includes **
+## **This lesson includes**
 
 * Testing Cookbooks
 * Configure Jenkins
