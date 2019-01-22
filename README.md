@@ -18,26 +18,26 @@ Test it on your local machine using Chef's unit and integration tests
 
 ### Unit Test:
 `chef rspec spec`
-### Integration
+### Integration Test:
 `kitchen test`
 
 ---
 
 ## Configure Jenkins
 
-> Access Sparta's Jenkins server `http://jenkins.spartaglobal.academy:8080`, log in with your credentials.
+> Access Sparta's Jenkins server with `http://jenkins.spartaglobal.academy:8080`, log in with your credentials.
 
-<p> Use the following steps to configure  Jenkins build to run a CI test for your Cookbook</p>
+<p> Use the following steps to configure a Jenkins build to run a CI test for your Cookbook</p>
 
 1. Create a freestyle job and give your project a name
 
-2. Check GitHub Project, and add your GitHub url for your cookbook (https version)
+2. Check GitHub Project, add your GitHub url for your cookbook (https version)
 
 3. Check Git under Source Code Management, add your GitHub Git repository and select your credentials.
-  * If you haven't set your credentials create them. You will need a new ssh private and public key so that Jenkins and your GitHub can communicate
+  * If you haven't set your credentials create them. You will need a new ssh private and public key so that Jenkins and GitHub can communicate
 
 4. Specify the branch you would like to build
-  * Good practice, run your jenkins build on a dev branch, if it passes, merge your dev branch into master
+  * Note: Good practice is running your jenkins build from a dev branch, if it passes, merge your dev branch into master
 
 5. Check 'Use secret text(s) or file(s)' under Build Environment, add AWS Access keys and secret
 
