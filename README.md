@@ -29,37 +29,37 @@ Test it on your local machine using Chef's unit and integration tests
 
 <p> Use the following steps to configure  Jenkins build to run a CI test for your Cookbook</p>
 1. Create a freestyle job and give your project a name
-* Check GitHub Project, and add your GitHub url for your cookbook (https version)
-* Check Git under Source Code Management, add your GitHub Git repository and select your credentials.
+2. Check GitHub Project, and add your GitHub url for your cookbook (https version)
+3. Check Git under Source Code Management, add your GitHub Git repository and select your credentials.
   * If you haven't set your credentials create them. You will need a new ssh private and public key so that Jenkins and your GitHub can communicate
-* Specify the branch you would like to build
+4. Specify the branch you would like to build
   * Good practice, run your jenkins build on a dev branch, if it passes, merge your dev branch into master
-* Check 'Use secret text(s) or file(s)' under Build Environment, add AWS Access keys and secret
-* Check 'Inject environment variables to the build process'
+5. Check 'Use secret text(s) or file(s)' under Build Environment, add AWS Access keys and secret
+6. Check 'Inject environment variables to the build process'
   * Add `KITCHEN_YAML=.kitchen.cloud.yml` to Properties Content
   * Check 'Use Groovy Sandbox'
-* In the Build step select 'Execute Shell'
+7. In the Build step select 'Execute Shell'
 ```
 chef exec rspec spec
 kitchen test
 ```
 
-* Under Post-build Action, select Git Publisher
+8. Under Post-build Action, select Git Publisher
   * Select 'Push Only if Build Succeeds'
   * Select 'Add Branch'
     * `Branch to push: master`
     * `Targer remote name: origin`
 
-* Switch to your GitHub repository
+9. Switch to your GitHub repository
   * Under Settings > Webhooks > Add Webhook
-    * Add `http://jenkins.spartaglobal.academy:8080/github-webhook/` to the Payload URL and save
+  * Add `http://jenkins.spartaglobal.academy:8080/github-webhook/` to the Payload URL and save
 > If it succeeds you should see a green tick and 'Payload delivered successfully'
 
 ---
 
 ### Running a Jenkins build when pushing new code
 1. Check GitHub hook trigger for GITScm polling
-* Push some Code and check if the Jenkins Build runs, passes and pushed code onto master successfully.
+2. Push some Code and check if the Jenkins Build runs, passes and pushed code onto master successfully.
 
 ---
 
@@ -72,11 +72,11 @@ kitchen test
       * Remember your word, you will need it later
     * Select 'Only use trigger phrase for build triggering'
   * Remove information from Crontab line, we don't want the build to run periodically only when a pull request is initiated.
-* Add another secret text to Build Environment
+2. Add another secret text to Build Environment
   * Select the *Jenkins GitHub Users* GitHub Token
   * Add your own SSH User Private Key, select your credentials
-* Check SSH Agent in Bindings and add the *Jenkins GitHub Users* credentials
-* Switch to your GitHub repository
+3. Check SSH Agent in Bindings and add the *Jenkins GitHub Users* credentials
+4. Switch to your GitHub repository
   * Protect your master branch, so that it requires you to have one approving review to merge a pull request into master
   * Add the *Jenkins GitHub User* as a reviewer
 
