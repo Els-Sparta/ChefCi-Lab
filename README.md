@@ -17,7 +17,7 @@ Create a cookbook for Nginx and make sure that you have set up a GitHub reposito
 Test it on your local machine using Chef's unit and integration tests
 
 ### Unit Test:
-`chef rspec spec`
+`chef exec rspec`
 ### Integration Test:
 `kitchen test`
 
